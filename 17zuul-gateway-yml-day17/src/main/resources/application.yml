@@ -1,0 +1,36 @@
+
+#yaml配置文件的好处：可以有顺序，而properties文件中的配置是没有顺序的。
+#注意变量的值要有个空格
+spring:
+  application:
+    name: zuul-gateway2
+server:
+  port: 2006
+
+#确保先进行前面的path匹配
+zuul:
+  routes:
+    local:
+#      直接路由到“local”的mapper上，测试地址：http://localhost:2006/myapi/local
+      path: /local/**
+      url: forward:/local
+    FEIGN-CONSUMER:
+      sensitiveHeaders: true
+      path: /feign-consumer/hello/**
+      serviceId: FEIGN-CONSUMER
+    FEIGN-CONSUMER-HELLO:
+      path: /feign-consumer/**
+      serviceId: FEIGN-CONSUMER
+  prefix: /myapi
+#  API网关在进行请求路由转发前为请求设置Host头信息,防止暴露服务实例地址
+  add-host-header: true
+#  全局重试机制开关
+  retryable: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+
+
+

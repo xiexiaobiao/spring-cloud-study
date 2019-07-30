@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:commons:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://C:/repository/org/springframework/cloud/commons/1.0-SNAPSHOT/commons-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://C:/repository/org/springframework/cloud/commons/1.0-SNAPSHOT/commons-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://C:/repository/org/springframework/cloud/commons/1.0-SNAPSHOT/commons-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
